@@ -148,8 +148,29 @@ a:focus {
 }
 
 @media (max-width: 991.98px) {
-    .top-bar .logo {
-        text-align: center;
+
+    .top-bar {
+        height: 75px;
+    }
+
+.top-bar .logo {
+        padding: 0; /* Eliminamos el padding innecesario */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 75px; /* Aseguramos que ocupe la nueva altura */
+    }
+
+    .top-bar .logo h1 {
+        /* REDUCCIÓN DE FUENTE: Pasamos de 60px a 40px o menos para que "S.A.S." quepa */
+        font-size: 40px; 
+        line-height: 40px; /* Ajustamos la altura de línea a la nueva fuente */
+        /* Forzamos el color para evitar que se mezcle si hay transparencia */
+        color: #030f27 !important;
+    }
+
+    .nav-bar {
+        margin-top: 0; /* Aseguramos que no haya margen negativo que lo suba */
     }
 }
 
